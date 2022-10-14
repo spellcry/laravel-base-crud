@@ -3,37 +3,26 @@
 @section('metaTitle', 'Comics')
 
 @section('content')
-    <div class="container">
-        <ul class="comics-list">
-            @foreach ($comics as $comic)
-                <li class="list-item">
-                    <img src="{{ $comic->thumb }}" class="thumb">
-                    <p class="title">
-                        <span>Titolo: </span>
-                        {{ $comic->title }}
-                    </p>
-                    <p class="description">
-                        <span>Descrizione: </span>
-                        {{ $comic->description }}
-                    </p>
-                    <p class="price">
-                        <span>Prezzo: </span>
-                        {{ $comic->price }}
-                    </p>
-                    <p class="series">
-                        <span>Serie: </span>
-                        {{ $comic->series }}
-                    </p>
-                    <p class="sale_date">
-                        <span>Data di vendita: </span>
-                        {{ $comic->sale_date }}
-                    </p>
-                    <p class="type">
-                        <span>Tipo: </span>
-                        {{ $comic->type }}
-                    </p>
-                </li>
-            @endforeach
-        </ul>
-    </div>
+    <section class="new-comics">            
+        <div class="container">
+            <a href="{{ route('comics.create') }}">Aggiungi fumetto</a>
+        </div>
+    </section>
+    <section class="comics-list">
+        <div class="container">
+            <ul class="comics-list">
+                @foreach ($comics as $comic)
+                    <li class="list-item">
+                        <p class="title">
+                            <a href="{{ route('comics.show', $comic) }}">
+                                <img src="{{ $comic->thumb }}" class="thumb">
+                                <span>Titolo: </span>
+                                {{ $comic->title }}
+                            </a>
+                        </p>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </section>
 @endsection

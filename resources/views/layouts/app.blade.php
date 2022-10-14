@@ -7,6 +7,8 @@
     <title>@yield('metaTitle')</title>
 </head>
 <body>
+    @include('partials.header')
+    
     <main class="main-content">
         @yield('content')
     </main>

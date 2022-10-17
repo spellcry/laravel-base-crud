@@ -198,20 +198,20 @@
         }
     }
     .info {       
-        padding-block: 3rem;
+        padding-block: 2rem;
         background-color: $color-light_grey;
         .row {
             gap: 2rem;
             flex-wrap: wrap;
-        }
-        .col-50 {            
-            flex-basis: 50%;
             .title {
+                flex-basis: 100%;
                 margin-bottom: 0;
-                padding-bottom: 1rem;
                 border-bottom: 1px solid #eee;
                 text-transform: capitalize;
             }
+        }
+        .col-50 {            
+            flex-basis: calc(50% - 2rem);
             .list-item {
                 display: flex;
                 gap: 3rem;

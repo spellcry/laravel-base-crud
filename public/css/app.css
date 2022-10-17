@@ -300,21 +300,21 @@ a {
   color: rgba(28, 28, 28, 0.6);
 }
 .comic .info {
-  padding-block: 3rem;
+  padding-block: 2rem;
   background-color: #F6F6F6;
 }
 .comic .info .row {
   gap: 2rem;
   flex-wrap: wrap;
 }
-.comic .info .col-50 {
-  flex-basis: 50%;
-}
-.comic .info .col-50 .title {
+.comic .info .row .title {
+  flex-basis: 100%;
   margin-bottom: 0;
-  padding-bottom: 1rem;
   border-bottom: 1px solid #eee;
   text-transform: capitalize;
+}
+.comic .info .col-50 {
+  flex-basis: calc(50% - 2rem);
 }
 .comic .info .col-50 .list-item {
   display: flex;

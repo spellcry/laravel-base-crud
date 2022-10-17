@@ -60,8 +60,8 @@
             <div class="info">
                 <div class="container">
                     <div class="row">                        
+                        <h3 class="title">Specs</h3>
                         <div class="col-50">
-                            <h3 class="title">Specs</h3>
                             <ul class="list">
                                 <li class="list-item">
                                     <div class="description">
@@ -78,13 +78,25 @@
                                     <div class="content price">
                                         <?= $comic['price'] ?>
                                     </div>
-                                </li>
+                                </li>                                
+                            </ul>
+                        </div>
+                        <div class="col-50">
+                            <ul class="list">                                
                                 <li class="list-item">
                                     <div class="description">
                                         On Sale Date:
                                     </div>
                                     <div class="content sale_date">
                                         <?= $comic['sale_date'] ?>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="description">
+                                        Type:
+                                    </div>
+                                    <div class="content type">
+                                        <?= $comic['type'] ?>
                                     </div>
                                 </li>
                             </ul>

@@ -127,11 +127,11 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 .main-content .container .options .cta {
   display: block;
   padding: 0.8rem 4rem;
-  margin-bottom: 1rem;
   border: none;
   background-color: #0282F9;
   color: #fff;
@@ -142,6 +142,10 @@ a {
 }
 .main-content .container .options .cta.add {
   background-color: transparent;
+}
+.main-content .container .options .cta.remove {
+  background-color: darkred;
+  border-color: darkred;
 }
 
 .hero {
@@ -235,6 +239,7 @@ a {
 }
 .comic .container {
   text-align: left;
+  padding-left: 1.5rem;
 }
 .comic .container .row {
   display: flex;
@@ -300,6 +305,7 @@ a {
 }
 .comic .info .row {
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .comic .info .col-50 {
   flex-basis: 50%;
@@ -330,4 +336,11 @@ a {
 }
 .comic .info .col-50 .list-item .content.price, .comic .info .col-50 .list-item .content.sale_date {
   color: rgba(28, 28, 28, 0.6);
+}
+.comic .info .options {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+.comic .info .options.col-100 {
+  flex-basis: 100%;
 }

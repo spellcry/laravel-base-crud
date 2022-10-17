@@ -15,10 +15,10 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
+            padding-bottom: 1rem;
             .cta {
                 display: block;
                 padding: 0.8rem 4rem;
-                margin-bottom: 1rem;
                 border: none;
                 background-color: $color-acc;
                 color: $color-white;
@@ -28,6 +28,10 @@
                 cursor: pointer;
                 &.add {
                     background-color: transparent;
+                }
+                &.remove {
+                    background-color: darkred;
+                    border-color: darkred;
                 }
             }
         }
@@ -129,6 +133,8 @@
     background-color: $color-white;
     padding-top: 4rem;
     .container {
+        text-align: left;
+        padding-left: 1.5rem;
         .row {
             display: flex;
         }
@@ -152,8 +158,7 @@
                     }
                 }
             }
-        }        
-        text-align: left;
+        }                
         .title {
             text-transform: uppercase;
             color: $color-dark_blue;
@@ -197,6 +202,7 @@
         background-color: $color-light_grey;
         .row {
             gap: 2rem;
+            flex-wrap: wrap;
         }
         .col-50 {            
             flex-basis: 50%;
@@ -229,5 +235,12 @@
                 }
             }
         } 
+        .options {
+            padding-top: 1rem;
+            padding-bottom: 0;
+            &.col-100 {
+                flex-basis: 100%;
+            }
+        }
     }
 }

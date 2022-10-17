@@ -1,14 +1,21 @@
 @extends('layouts.app')
 
-@section('metaTitle', 'Comics')
+@section('metaTitle', 'DC Comics Home')
 
 @section('content')
-    <section class="new-comics">            
-        <div class="container">
-            <a href="{{ route('comics.create') }}">Aggiungi fumetto</a>
+    @include('partials.hero')
+    <div class="container">
+        @include('partials.cards')
+        <div class="options">
+            <a class="cta load-more">
+                Load more
+            </a>
+            <a class="cta add" href="{{ route('comics.create') }}">
+                Aggiungi fumetto
+            </a>
         </div>
-    </section>
-    <section class="comics-list">
+    </div>
+    {{-- <section class="comics-list">
         <div class="container">
             <ul class="comics-list">
                 @foreach ($comics as $comic)
@@ -24,5 +31,5 @@
                 @endforeach
             </ul>
         </div>
-    </section>
+    </section> --}}
 @endsection

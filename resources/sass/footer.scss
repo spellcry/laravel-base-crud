@@ -1,0 +1,67 @@
+// Footer
+.footer__nav {
+    background-image: url("../img/footer-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 2rem;
+        max-height: 500px;
+        @include paddingBlock;
+        background-image: url("../img/dc-logo-bg.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+}
+
+.list-wrapper {
+    .title {
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        .list__item {
+            a {
+                font-size: 0.8rem;
+                color: #888;
+            }
+        }
+    }
+}
+
+.footer__actions {
+    background-color: #303030;
+    .container {
+        display: flex;
+        align-items: center;
+        padding-block: 1.5rem;
+    }
+    .cta {
+        padding: 1rem;
+        border: 2px solid $color-acc;
+        color: $color-white;
+        font-weight: bold;
+        background-color: transparent;
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $color-acc;
+        text-transform: uppercase;
+        img {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,333 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 0.5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+}
+.main-header .container .nav {
+  margin-left: auto;
+}
+.main-header .container .nav .nav__list {
+  display: flex;
+  gap: 2rem;
+}
+.main-header .container .nav .nav__list .list__item {
+  padding-block: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-bottom: 5px solid transparent;
+}
+.main-header .container .nav .nav__list .list__item.active, .main-header .container .nav .nav__list .list__item:hover {
+  color: #0282F9;
+  border-bottom-color: #0282F9;
+}
+.main-header .container .nav .nav__list .list__item a {
+  color: #1C1C1C;
+}
+
+.footer__nav {
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer__nav .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 2rem;
+  max-height: 500px;
+  padding-block: 3rem;
+  background-image: url("../img/dc-logo-bg.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.list-wrapper .title {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.list-wrapper .nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.list-wrapper .nav__list .list__item a {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.footer__actions {
+  background-color: #303030;
+}
+.footer__actions .container {
+  display: flex;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+.footer__actions .cta {
+  padding: 1rem;
+  border: 2px solid #0282F9;
+  color: #fff;
+  font-weight: bold;
+  background-color: transparent;
+}
+.footer__actions .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0282F9;
+  text-transform: uppercase;
+}
+.footer__actions .socials img {
+  cursor: pointer;
+}
+
+.main-content {
+  background-color: #1C1C1C;
+  color: #fff;
+}
+.main-content .container {
+  text-align: center;
+}
+.main-content .container .options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.main-content .container .options .cta {
+  display: block;
+  padding: 0.8rem 4rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #0282F9;
+  color: #fff;
+  border: 2px solid #0282F9;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.main-content .container .options .cta.add {
+  background-color: transparent;
+}
+
+.hero {
+  height: 350px;
+  background-image: url("../img/jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.cards {
+  position: relative;
+  padding-block: 3rem;
+}
+.cards .current-series {
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 1rem;
+  transform: translateY(-50%);
+  background-color: #0282F9;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.cards .cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 1.5rem;
+  padding-inline: 1rem;
+}
+.cards .cards__list .list__item {
+  flex-basis: calc((100% - 7.5rem) / 6);
+}
+.cards .cards__list .list__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  text-align: left;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.card .card__img {
+  margin-bottom: 1rem;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.card .title {
+  text-transform: uppercase;
+  color: #bbb;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+.main-sidebar {
+  background-color: #0282F9;
+  color: #fff;
+  padding-block: 3rem;
+}
+.main-sidebar .aside__list {
+  display: flex;
+  justify-content: space-around;
+}
+.main-sidebar .aside__list .list__item {
+  flex-basis: 15%;
+}
+
+.aside__list a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+.aside__list a img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 1rem;
+}
+
+.comic {
+  background-color: #fff;
+  padding-top: 4rem;
+}
+.comic .container {
+  text-align: left;
+}
+.comic .container .row {
+  display: flex;
+}
+.comic .container .description .row {
+  margin-bottom: 4rem;
+}
+.comic .container .description .row .col-70 {
+  flex-basis: 70%;
+}
+.comic .container .description .row .col-30 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-basis: 30%;
+  color: rgba(28, 28, 28, 0.6);
+  text-transform: uppercase;
+}
+.comic .container .description .row .col-30 .intro {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.comic .container .title {
+  text-transform: uppercase;
+  color: #263F5E;
+  margin-bottom: 1rem;
+}
+.comic .container .status {
+  display: flex;
+  background-color: #55BA59;
+  color: #9AF999;
+  margin-bottom: 1rem;
+}
+.comic .container .status .accent {
+  color: #fff;
+}
+.comic .container .status .price,
+.comic .container .status .availability,
+.comic .container .status .check-availability {
+  padding-block: 1rem;
+}
+.comic .container .status .price {
+  margin-right: auto;
+  padding-left: 1rem;
+}
+.comic .container .status .availability {
+  padding-right: 1rem;
+  border-right: 1px solid #263F5E;
+  text-transform: uppercase;
+}
+.comic .container .status .check-availability {
+  padding-inline: 1rem;
+}
+.comic .container .description_text {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: rgba(28, 28, 28, 0.6);
+}
+.comic .info {
+  padding-block: 3rem;
+  background-color: #F6F6F6;
+}
+.comic .info .row {
+  gap: 2rem;
+}
+.comic .info .col-50 {
+  flex-basis: 50%;
+}
+.comic .info .col-50 .title {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+}
+.comic .info .col-50 .list-item {
+  display: flex;
+  gap: 3rem;
+  padding-block: 0.5rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee;
+}
+.comic .info .col-50 .list-item .description {
+  flex-basis: 100px;
+  flex-shrink: 0;
+  color: #263F5E;
+}
+.comic .info .col-50 .list-item .content {
+  color: #24afff;
+}
+.comic .info .col-50 .list-item .content.series {
+  text-transform: uppercase;
+}
+.comic .info .col-50 .list-item .content.price, .comic .info .col-50 .list-item .content.sale_date {
+  color: rgba(28, 28, 28, 0.6);
+}

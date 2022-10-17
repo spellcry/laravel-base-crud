@@ -1,1 +1,233 @@
-//
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/general';
+
+@import './header.scss';
+@import './footer.scss';
+
+// Main Content
+.main-content {
+    background-color: $color-dark;
+    color: $color-white;
+    .container {
+        text-align: center;
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            .cta {
+                display: block;
+                padding: 0.8rem 4rem;
+                margin-bottom: 1rem;
+                border: none;
+                background-color: $color-acc;
+                color: $color-white;
+                border: 2px solid $color-acc;
+                font-weight: bold;
+                font-size: 0.85rem;
+                cursor: pointer;
+                &.add {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+// Hero
+.hero {            
+    height: 350px;
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+// Cards
+.cards {
+    position: relative;
+    @include paddingBlock;
+    .current-series {
+        position: absolute;
+        top: 0;
+        padding: 0.5rem 1rem;
+        transform: translateY(-50%);
+        background-color: $color-acc;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .cards__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem 1.5rem;
+        padding-inline: 1rem;
+        .list__item {
+            flex-basis: calc(calc(100% - 1.5rem * 5) / 6);
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// Card
+.card {
+    text-align: left;
+    cursor: pointer;
+    transition: transform 150ms ease-in-out;
+    .card__img {
+        margin-bottom: 1rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: top;
+    }
+    .title {
+        text-transform: uppercase;
+        color: #bbb;
+    }
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+// Sidebar
+.main-sidebar {
+    background-color: $color-acc;
+    color: $color-white;
+    @include paddingBlock;
+    .aside__list {
+        display: flex;
+        justify-content: space-around;
+        .list__item {
+            flex-basis: 15%;                                
+        }
+    }
+}
+
+// Sidebar Widget
+.aside__list{
+    a {
+        display: flex;
+        align-items: center;       
+        height: 100%;    
+        white-space: nowrap;    
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 1rem;
+        }
+    }
+}
+
+// Comic
+.comic {
+    background-color: $color-white;
+    padding-top: 4rem;
+    .container {
+        .row {
+            display: flex;
+        }
+        .description {
+            .row {
+                margin-bottom: 4rem;
+                .col-70 {
+                    flex-basis: 70%;
+                }
+                .col-30 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    flex-basis: 30%;
+                    color: $color-dark-grey;
+                    text-transform: uppercase;
+                    .intro {
+                        margin-bottom: 5px;
+                        font-size: 0.85rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }        
+        text-align: left;
+        .title {
+            text-transform: uppercase;
+            color: $color-dark_blue;
+            margin-bottom: 1rem;
+        }
+        .status {
+            display: flex;
+            background-color: $color-dark_green;
+            color: $color-light_green;
+            margin-bottom: 1rem;
+            .accent {
+                color: $color-white;
+            }
+            .price,
+            .availability,
+            .check-availability {
+                padding-block: 1rem;
+            }
+
+            .price {
+                margin-right: auto;   
+                padding-left: 1rem;             
+            }
+            .availability {
+                padding-right: 1rem;
+                border-right: 1px solid $color-dark_blue;
+                text-transform: uppercase;
+            }
+            .check-availability {
+                padding-inline: 1rem;
+            }
+        }
+        .description_text {
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: $color-dark-grey;
+        }
+    }
+    .info {       
+        padding-block: 3rem;
+        background-color: $color-light_grey;
+        .row {
+            gap: 2rem;
+        }
+        .col-50 {            
+            flex-basis: 50%;
+            .title {
+                margin-bottom: 0;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eee;
+                text-transform: capitalize;
+            }
+            .list-item {
+                display: flex;
+                gap: 3rem;
+                padding-block: 0.5rem;
+                font-size: 0.85rem;
+                border-bottom: 1px solid #eee;
+                .description {
+                    flex-basis: 100px;
+                    flex-shrink: 0;
+                    color: $color-dark_blue;
+                }
+                .content {
+                    color: $color-acc_light;
+                    &.series {
+                        text-transform: uppercase;
+                    }
+                    &.price,
+                    &.sale_date {
+                        color: $color-dark-grey;
+                    }
+                }
+            }
+        } 
+    }
+}

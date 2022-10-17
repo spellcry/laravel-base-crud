@@ -344,3 +344,32 @@ a {
 .comic .info .options.col-100 {
   flex-basis: 100%;
 }
+
+.edit .container,
+.create .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+.edit .container .title,
+.create .container .title {
+  padding-block: 1rem 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.edit .container label,
+.create .container label {
+  display: block;
+}
+.edit .container input,
+.edit .container textarea,
+.create .container input,
+.create .container textarea {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+.edit .container textarea,
+.create .container textarea {
+  margin-bottom: 2rem;
+}

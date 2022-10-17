@@ -27,4 +27,12 @@
             {{ $comic->type }} 
         </li>
     </ul>
+    <div class="options">
+        <a href="{{ route('comics.edit', $comic) }}">Modifica</a>
+        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+            @method('DELETE')
+            @csrf
+            <input type="submit" value="Elimina">
+        </form>
+    </div>
 @endsection
